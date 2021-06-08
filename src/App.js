@@ -2,7 +2,8 @@ import * as React from "react"
 import AuthenticatedApp from "./AuthenticatedApp"
 import UnauthenticatedApp from "./UnauthenticatedApp"
 import * as facade from "./facades/userFacade"
-import {handleError} from "./apiUtils"
+import { fetchData,handleError} from "./apiUtils"
+import {USER } from "./settings";
 
 function App() {
   const [user, setUser] = React.useState(null)
@@ -21,6 +22,12 @@ function App() {
     facade.logout()
     setUser(null)
   }
+  //Check if user is logged in already
+  React.useEffect(() => {
+    fetchData(USER.LOGIN + "/validate-token").then((userLogged) =>
+      setUser({username: userLogged.username})
+    );
+  }, []);
 
   // Whenever the user changes the app is rerendered
   return user ? (

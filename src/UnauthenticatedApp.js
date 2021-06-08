@@ -4,6 +4,7 @@ import UnauthenticatedHeader from "./components/UnauthenticatedHeader"
 import HomePage from "./routes/HomePage"
 import LoginPage from "./routes/LoginPage"
 import MuchDataPage from "./routes/MuchDataPage"
+import SignupPage from "./routes/SignupPage"
 
 function UnauthenticatedApp(props) {
   return (
@@ -18,6 +19,9 @@ function UnauthenticatedApp(props) {
         </Route>
         <Route path="/muchdata">
           <MuchDataPage />
+        </Route>
+        <Route path="/signup">
+          <SignupPage />
         </Route>
         <Route path="/">
           <h1>404</h1>

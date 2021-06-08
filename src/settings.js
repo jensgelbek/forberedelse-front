@@ -1,10 +1,11 @@
 const USER_BASE =
-  "https://peterrambeckandersen.com/tomcat/insession-starter/api"
+  "https://osvaldo.dk/tomcat/forberedelse/api";
 const INFO_BASE =
-  "https://peterrambeckandersen.com/tomcat/insession-starter/api/info"
+  "https://osvaldo.dk.com/tomcat/forberedelse/api/info";
 
 const USER = {
   LOGIN: `${USER_BASE}/login`,
+  SIGNUP: `${USER_BASE}/user`,
 }
 
 const INFO = {
