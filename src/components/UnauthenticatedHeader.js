@@ -14,9 +14,7 @@ function UnauthenticatedHeader() {
           <LinkContainer exact to="/">
             <Nav.Link>Home</Nav.Link>
           </LinkContainer>
-          <LinkContainer to="/muchdata">
-            <Nav.Link>Much data</Nav.Link>
-          </LinkContainer>
+         
         </Nav>
         <Nav>
           <LinkContainer to="/login">

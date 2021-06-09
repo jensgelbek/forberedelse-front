@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import UnauthenticatedHeader from "./components/UnauthenticatedHeader"
 import HomePage from "./routes/HomePage"
 import LoginPage from "./routes/LoginPage"
-import MuchDataPage from "./routes/MuchDataPage"
 import SignupPage from "./routes/SignupPage"
 
 function UnauthenticatedApp(props) {
@@ -17,9 +16,7 @@ function UnauthenticatedApp(props) {
         <Route path="/login">
           <LoginPage login={props.login} />
         </Route>
-        <Route path="/muchdata">
-          <MuchDataPage />
-        </Route>
+        
         <Route path="/signup">
           <SignupPage />
         </Route>

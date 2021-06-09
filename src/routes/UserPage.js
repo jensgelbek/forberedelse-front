@@ -1,14 +1,14 @@
 import * as React from "react"
 import {fetchData, handleError} from "../apiUtils"
 import CenteredContainer from "../components/CenteredContainer"
-import {INFO} from "../settings"
+import {INFO,USER} from "../settings"
 
 function UserPage() {
-  const [userData, setUserData] = React.useState()
-  const [error, setError] = React.useState()
+  const [userData, setUserData] = React.useState(null)
+  const [error, setError] = React.useState(null)
 
   React.useEffect(() => {
-    fetchData(INFO.USER)
+    fetchData(USER.HENT)
       .then(data => setUserData(data))
       .catch(error => handleError(error, setError))
   }, [])
@@ -16,8 +16,8 @@ function UserPage() {
   return (
     <CenteredContainer>
       <h1>Hello user 🚀🙊</h1>
-      {error && <h4>{error.message}</h4>}
-      {userData && <h4>{userData.msg}</h4>}
+      ${console.log(userData)}
+      {userData && <h4>{userData}</h4>}
     </CenteredContainer>
   )
 }

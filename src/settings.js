@@ -6,6 +6,7 @@ const INFO_BASE =
 const USER = {
   LOGIN: `${USER_BASE}/login`,
   SIGNUP: `${USER_BASE}/user`,
+  HENT: `${USER_BASE}/user`,
 }
 
 const INFO = {

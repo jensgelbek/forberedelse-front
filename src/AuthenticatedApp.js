@@ -3,7 +3,6 @@ import {Route, BrowserRouter as Router, Switch} from "react-router-dom"
 import AuthenticatedHeader from "./components/AuthenticatedHeader"
 import AdminPage from "./routes/AdminPage"
 import HomePage from "./routes/HomePage"
-import MuchDataPage from "./routes/MuchDataPage"
 import UserPage from "./routes/UserPage"
 
 function AuthenticatedApp(props) {
@@ -15,9 +14,7 @@ function AuthenticatedApp(props) {
         <Route path="/" exact>
           <HomePage />
         </Route>
-        <Route path="/muchdata">
-          <MuchDataPage />
-        </Route>
+       
         <Route path="/user">
           <UserPage />
         </Route>

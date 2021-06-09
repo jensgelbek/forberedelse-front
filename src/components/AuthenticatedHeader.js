@@ -14,15 +14,8 @@ function AuthenticatedHeader(props) {
           <LinkContainer exact to="/">
             <Nav.Link>Home</Nav.Link>
           </LinkContainer>
-          <LinkContainer to="/muchdata">
-            <Nav.Link>Much data</Nav.Link>
-          </LinkContainer>
-          <LinkContainer to="/user">
-            <Nav.Link>User data</Nav.Link>
-          </LinkContainer>
-          <LinkContainer to="/admin">
-            <Nav.Link>Admin data</Nav.Link>
-          </LinkContainer>
+         
+        
         </Nav>
         <Nav>
           <Navbar.Text>Signed in as: {props.user.username}</Navbar.Text>
