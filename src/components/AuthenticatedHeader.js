@@ -10,12 +10,15 @@ function AuthenticatedHeader(props) {
       </LinkContainer>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav>
           <LinkContainer exact to="/">
             <Nav.Link>Home</Nav.Link>
           </LinkContainer>
-         
-        
+        </Nav>
+        <Nav className="mr-auto">
+          <LinkContainer to="/addrace">
+            <Nav.Link>Add Race</Nav.Link>
+          </LinkContainer>
         </Nav>
         <Nav>
           <Navbar.Text>Signed in as: {props.user.username}</Navbar.Text>
